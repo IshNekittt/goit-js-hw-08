@@ -47,6 +47,7 @@ body {
 
 .basicLightbox-container {
   max-width: 1112px;
+  margin: 0 5%;
 }
 
 .basicLightbox-container img {
