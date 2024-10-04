@@ -42,12 +42,13 @@ body {
 }
 
 .is-active {
+  box-sizing: border-box;
   background-color: rgba(46, 47, 66, 0.8);
+  padding: 0 5%;
 }
 
 .basicLightbox-container {
   max-width: 1112px;
-  margin: 0 5%;
 }
 
 .basicLightbox-container img {
