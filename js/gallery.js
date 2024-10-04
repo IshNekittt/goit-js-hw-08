@@ -86,5 +86,22 @@ const markup = images
 gallery.innerHTML = markup;
 gallery.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e.target.dataset.source);
+  if (e.target.nodeName !== "IMG") {
+    return;
+  }
+  // eslint-disable-next-line no-undef
+  const modal = basicLightbox.create(
+    `<div class="basicLightbox-container">
+    <img src=${e.target.dataset.source}>
+    </div>`,
+    {
+      className: "is-active",
+    }
+  );
+  modal.show();
+  document
+    .querySelector(".basicLightbox-container")
+    .addEventListener("click", () => {
+      modal.close();
+    });
 });
