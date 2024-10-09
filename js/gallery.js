@@ -89,7 +89,6 @@ gallery.addEventListener("click", (e) => {
   if (e.target.nodeName !== "IMG") {
     return;
   }
-  // eslint-disable-next-line no-undef
   const modal = basicLightbox.create(
     `<div class="basicLightbox-container">
     <img src=${e.target.dataset.source}>
